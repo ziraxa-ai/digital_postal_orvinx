@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ORVINX — Interactive Brochure</title>
+  <meta name="description" content="ORVINX Turns digital transformation from a dream into a workable and ideal reality for businesses." />
+  <link rel="preload" href="assets/cover.webp" as="image">
+  <link rel="preload" href="assets/inside.webp" as="image">
+  <link rel="preload" href="assets/music.mp3" as="audio">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app" id="app" aria-label="ORVINX interactive brochure">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand__name">ORVINX</div>
+        <div class="brand__tag">Business Digital Transformation</div>
+      </div>
+
+      <div class="controls">
+        <!-- <button class="btn" id="toggleAudio" type="button" aria-pressed="false" title="Toggle sound">
+          Sound: Off
+        </button> -->
+        <a class="btn btn--primary" href="https://orvinx.com" target="_blank" rel="noopener">Visit Orvinx.com</a>
+      </div>
+    </header>
+
+    <main class="stage" id="stage">
+      <!-- 3D card container -->
+      <section class="card" id="card" aria-live="polite">
+        <!-- FRONT (cover) -->
+        <div class="face face--front" id="coverFace">
+          <img class="art" src="assets/cover.webp" alt="ORVINX brochure cover" />
+          <div class="coverOverlay">
+            <h1 class="headline">ORVINX</h1>
+            <p class="subhead">
+              ORVINX Turns digital transformation from a dream into a workable and ideal reality for businesses.
+            </p>
+            <div class="ctaRow">
+              <button class="btn btn--primary" id="openBtn" type="button">
+                Open Brochure
+              </button>
+            </div>
+            <div class="hint">Click to open. Sound can start after your first interaction.</div>
+          </div>
+        </div>
+
+        <!-- BACK (inside) -->
+        <div class="face face--back" id="insideFace">
+          <img class="art" src="assets/inside.webp" alt="ORVINX brochure inside spread" />
+
+          <!-- Clickable hotspots (adjust positions in CSS variables or inline styles) -->
+          <!-- <a class="hotspot" id="hotspotSite"
+             href="https://orvinx.com" target="_blank" rel="noopener"
+             aria-label="Open website Orvinx.com"
+             style="--x: 52%; --y: 86%; --w: 42%; --h: 7%;"></a>
+
+          <a class="hotspot" id="hotspotPhone"
+             href="tel:+989197839834"
+             aria-label="Call +98 919 783 9834"
+             style="--x: 50%; --y: 62%; --w: 45%; --h: 7%;"></a>
+
+          <a class="hotspot" id="hotspotEmail"
+             href="mailto:info@ziraxa.ir"
+             aria-label="Email info@ziraxa.ir"
+             style="--x: 50%; --y: 70%; --w: 45%; --h: 7%;"></a> -->
+
+          <div class="insideOverlay">
+            <div class="insideText">
+              <h2>About ORVINX</h2>
+              <p>
+                Orvinx
+is a digital transformation design and implementation service provider that focuses on real business needs and helps organizations transition from traditional models to digital and intelligent processes.
+              </p>
+              <div class="insideActions">
+                <a class="btn btn--primary" href="https://orvinx.com" target="_blank" rel="noopener">Orvinx.com</a>
+                <a class="btn" href="tel:+989197839834">Call</a>
+                <a class="btn" href="mailto:info@orvinx.com">Email</a>
+                <button class="btn btn--ghost" id="closeBtn" type="button">Close</button>
+              </div>
+            </div>
+
+            
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> ORVINX</div>
+      <div class="footerLinks">
+        <a href="https://orvinx.com" target="_blank" rel="noopener">Website</a>
+        <a href="tel:+989197839834">Phone</a>
+        <a href="mailto:info@orvinx.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Audio must start after user interaction -->
+  <audio id="bgm" src="assets/music.mp3" preload="auto" loop></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
